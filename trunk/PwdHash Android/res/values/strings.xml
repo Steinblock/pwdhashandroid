@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, PwdHashAndroid</string>
+    <string name="app_name">PwdHash for Android</string>
+<string name="site_domain">Site Domain</string>
+<string name="site_password">Site Password</string>
+<string name="copy_clipboard">Copy Password to Clipboard</string>
+<string name="copy_clipboard_visit_site">Copy Password and Open Browser</string>
+
+</resources>
