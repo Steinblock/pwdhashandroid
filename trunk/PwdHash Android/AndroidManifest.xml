@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-      package="pwdhash.android.com"
+      package="com.android.pwdhashandroid"
       android:versionCode="1"
       android:versionName="1.0.0">
     <application android:icon="@drawable/icon" android:label="@string/app_name">
@@ -11,5 +11,30 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        
+       <activity android:name=".LauncherShortcuts"
+                  android:label="@string/shortcuts">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.SAMPLE_CODE" />
+            </intent-filter>
+        </activity>
+        
+        <!-- It is recommended that you use an activity-alias to provide the "CREATE_SHORTCUT" -->
+        <!-- intent-filter.  This gives you a way to set the text (and optionally the -->
+        <!-- icon) that will be seen in the launcher's create-shortcut user interface. -->
+
+        <activity-alias android:name=".CreateShortcuts"
+            android:targetActivity=".LauncherShortcuts"
+            android:label="@string/sample_shortcuts">
+
+            <!--  This intent-filter allows your shortcuts to be created in the launcher. -->
+            <intent-filter>
+                <action android:name="android.intent.action.CREATE_SHORTCUT" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+		</activity-alias>
+
+
     </application>
 </manifest> 

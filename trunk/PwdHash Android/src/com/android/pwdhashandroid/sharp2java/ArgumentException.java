@@ -1,4 +1,4 @@
-// ArgumentNullException.java
+// ArgumentException.java
 // 
 // Copyright (C) 2009 Jürgen Steinblock
 //
@@ -16,19 +16,17 @@
 // along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //
 
-package pwdhash.android.com.sharp2java;
+package com.android.pwdhashandroid.sharp2java;
 
 /// <summary>
-/// dot.NET ArgumentNullException for Java
+/// dot.NET ArgumentException for Java
 /// </summary>
-public class ArgumentNullException extends Exception {
+public class ArgumentException extends Exception {
 
-	private static final long serialVersionUID = -4968271778721765018L;
+	private static final long serialVersionUID = 5753524364881271418L;
 
-	public ArgumentNullException(String argument, String message) {
+	public ArgumentException(String message, String argument) {
 		super(message + ": " + argument);
 	}
 
-	
-	
 }

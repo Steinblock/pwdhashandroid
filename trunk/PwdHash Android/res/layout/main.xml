@@ -6,10 +6,11 @@
     >
 <TextView  
     android:layout_width="fill_parent" 
-    android:layout_height="wrap_content" android:text="@string/site_domain"/>
+    android:layout_height="wrap_content" android:text="@string/lable_site_domain"/>
 <EditText android:layout_height="wrap_content" android:layout_width="fill_parent" android:id="@+id/editTextSiteDomain"></EditText>
-<TextView android:id="@+id/TextView01" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/site_password"></TextView>
+<TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/lable_site_password"></TextView>
 <EditText android:layout_height="wrap_content" android:layout_width="fill_parent" android:id="@+id/editTextSitePassword"></EditText>
 <Button android:layout_height="wrap_content" android:layout_width="fill_parent" android:text="@string/copy_clipboard" android:id="@+id/buttonCopyClip"></Button>
 <Button android:layout_height="wrap_content" android:layout_width="fill_parent" android:text="@string/copy_clipboard_visit_site" android:id="@+id/buttonCopyAndOpen"></Button>
+<Button android:layout_height="wrap_content" android:layout_width="fill_parent" android:id="@+id/buttonCreateShortcut" android:text="@string/create_shortcut"></Button>
 </LinearLayout>

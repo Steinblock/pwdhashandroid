@@ -23,7 +23,7 @@
 // along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //
 
-package pwdhash.android.com;
+package com.android.pwdhashandroid.pwdhash;
 
 import java.security.GeneralSecurityException;
 import java.util.LinkedList;
@@ -32,8 +32,9 @@ import java.util.regex.Pattern;
 
 import org.apache.http.util.EncodingUtils;
 
-import pwdhash.android.com.sharp2java.Base64Coder;
-import pwdhash.android.com.sharp2java.HMACMD5;
+import com.android.pwdhashandroid.sharp2java.Base64Coder;
+import com.android.pwdhashandroid.sharp2java.HMACMD5;
+
 import android.util.Log;
 
 

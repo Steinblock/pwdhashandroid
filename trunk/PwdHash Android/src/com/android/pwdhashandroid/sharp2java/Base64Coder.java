@@ -4,7 +4,7 @@
 // http://forums.sun.com/thread.jspa?threadID=477461&start=15
 //
 
-package pwdhash.android.com.sharp2java;
+package com.android.pwdhashandroid.sharp2java;
 
 
 import java.util.prefs.*;

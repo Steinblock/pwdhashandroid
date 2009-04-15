@@ -1,4 +1,4 @@
-// ArgumentException.java
+// CSString.java
 // 
 // Copyright (C) 2009 Jürgen Steinblock
 //
@@ -16,17 +16,35 @@
 // along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //
 
-package pwdhash.android.com.sharp2java;
+package com.android.pwdhashandroid.sharp2java;
 
 /// <summary>
-/// dot.NET ArgumentException for Java
+/// Implements some dot.NET String Methods
 /// </summary>
-public class ArgumentException extends Exception {
+public class CSString {
+	
+	public static boolean isNullOrEmpty(String string) {
+		if (string == null)
+			return true;
+		
+		if (string.length() == 0)
+			return true;
+		
+		return false;
+	}
 
-	private static final long serialVersionUID = 5753524364881271418L;
+	public static String join(String delimeter, String[] items) {
+		if (items.length == 0)
+			return "";
+		
+		StringBuilder result = new StringBuilder();
+		for (int i = 0; i <= items.length - 1; i++) {
+			result.append(items[i]);
+			if (i != items.length - 1)
+				result.append(delimeter);
+		}
 
-	public ArgumentException(String message, String argument) {
-		super(message + ": " + argument);
+		return result.toString();
 	}
 
 }

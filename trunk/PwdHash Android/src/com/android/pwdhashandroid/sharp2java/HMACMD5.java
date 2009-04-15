@@ -16,7 +16,7 @@
 // along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //
 
-package pwdhash.android.com.sharp2java;
+package com.android.pwdhashandroid.sharp2java;
 
 import java.security.GeneralSecurityException;
 import javax.crypto.Mac;

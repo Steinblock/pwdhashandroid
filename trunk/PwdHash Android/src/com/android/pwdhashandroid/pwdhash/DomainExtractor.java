@@ -23,12 +23,13 @@
 // along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //
 
-package pwdhash.android.com;
+package com.android.pwdhashandroid.pwdhash;
 
 import android.util.Log;
-import pwdhash.android.com.sharp2java.ArgumentException;
-import pwdhash.android.com.sharp2java.CSString;
 import java.util.regex.*;
+
+import com.android.pwdhashandroid.sharp2java.ArgumentException;
+import com.android.pwdhashandroid.sharp2java.CSString;
 
 /// <summary>
 /// A utility for extracting the domain portion for a URI

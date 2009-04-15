@@ -2,9 +2,15 @@
 <resources>
     <string name="hello">Hello World, PwdHashAndroid</string>
     <string name="app_name">PwdHash for Android</string>
-<string name="site_domain">Site Domain</string>
-<string name="site_password">Site Password</string>
+<string name="lable_site_domain">Site Domain</string>
+<string name="lable_site_password">Site Password</string>
 <string name="copy_clipboard">Copy Password to Clipboard</string>
 <string name="copy_clipboard_visit_site">Copy Password and Open Browser</string>
 
+<string name="create_shortcut">Create shortcut on homescreen</string>
+<string name="shortcut_name">Sample123</string>
+<string name="label_intent">Intent</string>
+<string name="msg_launcher_shortcuts">This activity creates shortcuts for the launcher (home screen), and receives intents from those shortcuts.  To try it, return to the launcher and long-press to create a shortcut.</string>
+<string name="shortcuts">Shortcuts</string>
+<string name="sample_shortcuts">ApiDemos123</string>
 </resources>
