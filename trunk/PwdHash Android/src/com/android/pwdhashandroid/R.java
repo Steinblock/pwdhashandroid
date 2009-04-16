@@ -10,34 +10,50 @@ package com.android.pwdhashandroid;
 public final class R {
     public static final class attr {
     }
+    public static final class dimen {
+        public static final int default_font_size=0x7f040001;
+        public static final int large_font_size=0x7f040000;
+    }
     public static final class drawable {
         public static final int app_sample_code=0x7f020000;
         public static final int icon=0x7f020001;
     }
     public static final class id {
-        public static final int buttonCopyAndOpen=0x7f050004;
-        public static final int buttonCopyClip=0x7f050003;
-        public static final int buttonCreateShortcut=0x7f050005;
-        public static final int editTextSiteDomain=0x7f050001;
-        public static final int editTextSitePassword=0x7f050002;
-        public static final int txt_shortcut_intent=0x7f050000;
+        public static final int TableLayout01=0x7f060007;
+        public static final int TableRow01=0x7f060008;
+        public static final int TableRow02=0x7f06000a;
+        public static final int buttonCopyAndOpen=0x7f060004;
+        public static final int buttonCopyClip=0x7f060003;
+        public static final int buttonCreateShortcut=0x7f060005;
+        public static final int editTextSiteDomain=0x7f060001;
+        public static final int editTextSitePassword=0x7f060002;
+        public static final int text1=0x7f060006;
+        public static final int textSiteName=0x7f060009;
+        public static final int textSiteUri=0x7f06000b;
+        public static final int txt_shortcut_intent=0x7f060000;
     }
     public static final class layout {
         public static final int launcher_shortcuts=0x7f030000;
-        public static final int main=0x7f030001;
+        public static final int layout_edit=0x7f030001;
+        public static final int layout_list=0x7f030002;
+        public static final int layout_row=0x7f030003;
+        public static final int layout_row2=0x7f030004;
     }
     public static final class string {
-        public static final int app_name=0x7f040001;
-        public static final int copy_clipboard=0x7f040004;
-        public static final int copy_clipboard_visit_site=0x7f040005;
-        public static final int create_shortcut=0x7f040006;
-        public static final int hello=0x7f040000;
-        public static final int label_intent=0x7f040008;
-        public static final int lable_site_domain=0x7f040002;
-        public static final int lable_site_password=0x7f040003;
-        public static final int msg_launcher_shortcuts=0x7f040009;
-        public static final int sample_shortcuts=0x7f04000b;
-        public static final int shortcut_name=0x7f040007;
-        public static final int shortcuts=0x7f04000a;
+        public static final int DATE_FORMAT_ISO8601=0x7f05000e;
+        public static final int app_name=0x7f050001;
+        public static final int copy_clipboard=0x7f050004;
+        public static final int copy_clipboard_visit_site=0x7f050005;
+        public static final int create_shortcut=0x7f050008;
+        public static final int hello=0x7f050000;
+        public static final int label_intent=0x7f05000a;
+        public static final int lable_site_domain=0x7f050002;
+        public static final int lable_site_password=0x7f050003;
+        public static final int menu_delete=0x7f050007;
+        public static final int menu_insert=0x7f050006;
+        public static final int msg_launcher_shortcuts=0x7f05000b;
+        public static final int sample_shortcuts=0x7f05000d;
+        public static final int shortcut_name=0x7f050009;
+        public static final int shortcuts=0x7f05000c;
     }
 }
