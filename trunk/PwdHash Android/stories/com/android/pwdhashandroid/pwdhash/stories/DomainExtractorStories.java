@@ -24,26 +24,23 @@ public class DomainExtractorStories extends TestCase {
 		siteTable.put("http://subdomain.example.com/index.html", "example.com");
 		siteTable.put("https://subdomain.example.com/index.html", "example.com");
 		
-		siteTable.put("http://subdomain.example.com:80/index.html", "example.com");
-		siteTable.put("https://subdomain.example.com:443/index.html", "example.com");
+		// not clear about this one. same result as pwdhash.com, but seems wrong in my eyes (would expect the port to be ignored
+		siteTable.put("http://subdomain.example.com:80/index.html", "example.com:80");
+		siteTable.put("https://subdomain.example.com:443/index.html", "example.com:443");
 	}
 	
 	@Test
-	public void canExtractDomain()
+	public void canExtractDomain() throws ArgumentException
 	{
 		for (String uri: siteTable.keySet() ) {
 			String expected_site = siteTable.get(uri);
 			String actual_site = null;
 			
-			try {
-				actual_site = DomainExtractor.ExtractDomain(uri);
-			} catch (ArgumentException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-	
-			String msg = "" + uri + ": " + actual_site;
-			assertEquals(msg, expected_site, actual_site);
+
+			actual_site = DomainExtractor.ExtractDomain(uri);
+
+			
+			assertEquals(expected_site, actual_site);
 		}
 	}
 }

@@ -84,7 +84,7 @@ public class SitesController {
                     + "AccessedOn date, "
                     + "UsageCounter integer not null);";
 
-    private static final String DATABASE_NAME = "pwdhashandroid";
+    private static final String DATABASE_NAME = "pwdhashandroid.db";
     private static final String DATABASE_TABLE = "sites";
     private static final int DATABASE_VERSION = 1;
 

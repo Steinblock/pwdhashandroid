@@ -19,17 +19,16 @@ public final class R {
         public static final int icon=0x7f020001;
     }
     public static final class id {
-        public static final int TableLayout01=0x7f060007;
-        public static final int TableRow01=0x7f060008;
-        public static final int TableRow02=0x7f06000a;
+        public static final int TableLayout01=0x7f060006;
+        public static final int TableRow01=0x7f060007;
+        public static final int TableRow02=0x7f060009;
         public static final int buttonCopyAndOpen=0x7f060004;
         public static final int buttonCopyClip=0x7f060003;
         public static final int buttonCreateShortcut=0x7f060005;
         public static final int editTextSiteDomain=0x7f060001;
         public static final int editTextSitePassword=0x7f060002;
-        public static final int text1=0x7f060006;
-        public static final int textSiteName=0x7f060009;
-        public static final int textSiteUri=0x7f06000b;
+        public static final int textSiteName=0x7f060008;
+        public static final int textSiteUri=0x7f06000a;
         public static final int txt_shortcut_intent=0x7f060000;
     }
     public static final class layout {
@@ -37,7 +36,6 @@ public final class R {
         public static final int layout_edit=0x7f030001;
         public static final int layout_list=0x7f030002;
         public static final int layout_row=0x7f030003;
-        public static final int layout_row2=0x7f030004;
     }
     public static final class string {
         public static final int DATE_FORMAT_ISO8601=0x7f05000e;

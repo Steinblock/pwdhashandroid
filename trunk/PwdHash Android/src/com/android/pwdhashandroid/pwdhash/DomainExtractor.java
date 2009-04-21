@@ -55,8 +55,8 @@ public class DomainExtractor {
 		
 		String host = uri;
 		
-		Log.d(tag, "extractDomain:");
-		Log.d(tag, "initial host:\t" + host);
+//		Log.d(tag, "extractDomain:");
+//		Log.d(tag, "initial host:\t" + host);
 		
 		String s; // the final result
 		
@@ -84,7 +84,7 @@ public class DomainExtractor {
 		}
 		// End Chris Zarate's code
 
-		Log.d(tag, "final host:\t" + s);
+//		Log.d(tag, "final host:\t" + s);
 
 		return s;
 		

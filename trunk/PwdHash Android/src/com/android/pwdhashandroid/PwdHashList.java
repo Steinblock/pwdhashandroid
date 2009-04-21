@@ -19,8 +19,8 @@ public class PwdHashList extends ListActivity {
     private static final int ACTIVITY_CREATE=0;
     private static final int ACTIVITY_EDIT=1;
 	
-    private static final int INSERT_ID = Menu.FIRST;
-    private static final int DELETE_ID = Menu.FIRST + 1;
+    public static final int INSERT_ID = Menu.FIRST;
+    public static final int DELETE_ID = Menu.FIRST + 1;
     
     /** Called when the activity is first created. */
     @Override
@@ -45,7 +45,7 @@ public class PwdHashList extends ListActivity {
         
         // Now create a simple cursor adapter and set it to display
         SimpleCursorAdapter sites = 
-        	    new SimpleCursorAdapter(this, R.layout.layout_row2, sitesCursor, from, to);
+        	    new SimpleCursorAdapter(this, R.layout.layout_row, sitesCursor, from, to);
         setListAdapter(sites);
         
     }
