@@ -81,12 +81,16 @@ public class PwdHashEdit extends Activity {
     @Override
     protected void onPause() {
         super.onPause();
+        
         saveState();
+        sitesController.close();
     }
     
     @Override
     protected void onResume() {
         super.onResume();
+        
+        sitesController.open();
         populateFields();
     }
     

@@ -54,6 +54,7 @@ public class DomainExtractor {
 			throw new ArgumentException("Please enter a valid URI", uri);
 		
 		String host = uri;
+		
 		Log.d(tag, "extractDomain:");
 		Log.d(tag, "initial host:\t" + host);
 		
