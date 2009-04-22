@@ -6,5 +6,6 @@
 	<classpathentry kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
 	<classpathentry kind="lib" path="lib/positron-1.0-rc5.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
+	<classpathentry kind="lib" path="lib/p-unit-0.15-android.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

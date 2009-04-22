@@ -14,6 +14,10 @@ public class PwdHashStories extends TestCase {
 
 	@Before
 	public void setUp() {
+		System.out.println("Empty pwdhashandroid.db sites table");
+		
+		this.
+		
 		sql("pwdhashandroid.db", "DELETE FROM sites");
 		startActivity("com.android.pwdhashandroid", "com.android.pwdhashandroid.PwdHashList");
 		pause();
@@ -21,6 +25,7 @@ public class PwdHashStories extends TestCase {
 	
 	@Test
 	public void shouldAddASite() {	
+		System.out.println("Test if creation of a new site is possible");
 		
 		assertEquals(0, intAt("listView.count"));
 		

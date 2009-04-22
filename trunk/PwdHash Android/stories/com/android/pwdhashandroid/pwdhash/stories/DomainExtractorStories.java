@@ -32,6 +32,7 @@ public class DomainExtractorStories extends TestCase {
 	@Test
 	public void canExtractDomain() throws ArgumentException
 	{
+		System.out.println("Test if domain extraction from uri works...");
 		for (String uri: siteTable.keySet() ) {
 			String expected_site = siteTable.get(uri);
 			String actual_site = null;

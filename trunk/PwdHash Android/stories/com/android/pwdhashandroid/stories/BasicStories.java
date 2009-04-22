@@ -13,6 +13,8 @@ public class BasicStories extends TestCase {
 	
     @Test
     public void shouldSeePwdHashListActivity() throws InterruptedException {
+    		System.out.println("Test if activity PwdHashList starts");
+    	
 //                        Your package            		Your activity
             startActivity("com.android.pwdhashandroid", "com.android.pwdhashandroid.PwdHashList");
             pause();
@@ -21,6 +23,8 @@ public class BasicStories extends TestCase {
     
     @Test
     public void shouldSeePwdHashEditActivity() throws InterruptedException {
+    		System.out.println("Test if activity PwdHashEdit starts");
+    	
 //                        Your package            		Your activity
             startActivity("com.android.pwdhashandroid", "com.android.pwdhashandroid.PwdHashEdit");
             pause();
@@ -30,6 +34,8 @@ public class BasicStories extends TestCase {
     
     @Test
     public void canAccessAndroidLibraryClasses() {
+    	
+    	System.out.println("Test if Testrunner is able to access the android library");
     	
     	boolean itworks = false;
     	try {

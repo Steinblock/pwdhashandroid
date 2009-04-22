@@ -28,8 +28,9 @@ public class PasswordHasherStories extends TestCase {
 	
 	@Ignore // until BasicStories.canAccessAndroidLabraryClasses works 
 	@Test
-	public void canGenerateHash() throws GeneralSecurityException
+	public void canGenerateHashForExampleDotCom() throws GeneralSecurityException
 	{
+		System.out.println("Test if hash generation for site example.com works...");
 		for (String password: hashTable.keySet() ) {
 			String expected_hash = hashTable.get(password);
 			String actual_hash = null;
