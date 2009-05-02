@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    >
+<TextView  
+    android:layout_width="fill_parent" 
+    android:layout_height="wrap_content" android:text="@string/lable_site_domain"/>
+<EditText android:layout_height="wrap_content" android:layout_width="fill_parent" android:id="@+id/editTextSiteDomain" android:autoText="true"></EditText>
+<TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/lable_site_password"></TextView>
+<EditText android:layout_height="wrap_content" android:layout_width="fill_parent" android:id="@+id/editTextSitePassword" android:password="true"></EditText>
+<Button android:layout_height="wrap_content" android:layout_width="fill_parent" android:text="@string/copy_clipboard" android:id="@+id/buttonCopyClip"></Button>
+<Button android:layout_height="wrap_content" android:layout_width="fill_parent" android:text="@string/copy_clipboard_visit_site" android:id="@+id/buttonCopyAndOpen"></Button>
+<Button android:layout_height="wrap_content" android:layout_width="fill_parent" android:id="@+id/buttonCreateShortcut" android:text="@string/create_shortcut"></Button>
+</LinearLayout>
