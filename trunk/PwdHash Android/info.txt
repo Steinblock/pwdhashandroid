@@ -1,2 +1,0 @@
-Subversion unter Eclipse nutzen:
-http://javathreads.de/2008/07/subversion-unter-eclipse-ganymede-konfigurieren/
