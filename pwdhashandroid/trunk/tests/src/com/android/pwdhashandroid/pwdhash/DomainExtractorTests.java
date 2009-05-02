@@ -1,9 +1,5 @@
 package com.android.pwdhashandroid.pwdhash;
 
-import java.util.HashMap;
-
-import org.junit.Test;
-
 import junit.framework.TestCase;
 import android.test.suitebuilder.annotation.SmallTest;
 
