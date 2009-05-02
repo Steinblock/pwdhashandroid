@@ -89,11 +89,7 @@ public class DomainExtractorTests extends TestCase {
 			DomainExtractor.ExtractDomain("");
 			
 			fail("DomainExtractor.ExtractDomain should throw a ArgumentException with empty domain");
-		} catch (ArgumentException e) {
-			// Everything ok
-		} catch (Throwable t) {
-			fail("DomainExtractor.ExtractDomain should throw a ArgumentException with empty domain");
-		}
+		} catch (ArgumentException e) {	}
 	}
 
 	@SmallTest	//(expected = ArgumentException.class)
@@ -103,11 +99,7 @@ public class DomainExtractorTests extends TestCase {
 			DomainExtractor.ExtractDomain(null);
 			
 			fail("DomainExtractor.ExtractDomain should throw a ArgumentException with empty domain");
-		} catch (ArgumentException e) {
-			// Everything ok
-		} catch (Throwable t) {
-			fail("DomainExtractor.ExtractDomain should throw a ArgumentException with empty domain");
-		}
+		} catch (ArgumentException e) { }
 	}
 	
 }

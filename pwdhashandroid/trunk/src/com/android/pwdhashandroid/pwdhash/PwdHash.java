@@ -40,6 +40,12 @@ public class PwdHash {
 			throw new ArgumentException("Please specify a valid Site Password",
 			                            "sitePassword");
 		
+		// the pwdhash firefox extension behaves this way
+		// however, the generator on pwdhash.com allows this passwords
+		if (sitePassword.length() <= 4)
+			throw new ArgumentException("Your password is too short to protect",
+										"sitePassword");
+		
 		// Get the base domain from the given URI
 		String domain = DomainExtractor.ExtractDomain(siteAddress);
 		
@@ -56,8 +62,7 @@ public class PwdHash {
 		try {
 			hashedPassword = hasher.GetHashedPassword();
 		} catch (GeneralSecurityException e) {
-			throw new ArgumentException("Generation of Passwordhash failed",
-										"sitePassword");
+			throw new Error("Generation of Passwordhash failed", e);
 		}
 		
 		return hashedPassword;
