@@ -21,7 +21,7 @@ package com.android.pwdhashandroid.sharp2java;
 /// <summary>
 /// dot.NET ArgumentException for Java
 /// </summary>
-public class ArgumentException extends Exception {
+public class ArgumentException extends Error {
 
 	private static final long serialVersionUID = 5753524364881271418L;
 

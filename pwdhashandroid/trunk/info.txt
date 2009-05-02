@@ -1,0 +1,5 @@
+Create avd with android 1.5 SDK and windows (vista)
+
+cd \location\to\sdk\tools
+android create avd -t 1 -n android-1.1-default
+android create avd -t 2 -n android-1.5-default

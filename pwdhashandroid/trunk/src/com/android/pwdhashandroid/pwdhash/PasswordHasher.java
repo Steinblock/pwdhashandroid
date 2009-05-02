@@ -122,9 +122,9 @@ public class PasswordHasher {
 	/// </returns>
 	protected String B64HmacMd5(String password, String realm) throws GeneralSecurityException {
 
-//		Log.d(tag, "B64HmacMd5:");
-//		Log.d(tag, "password:\t" + password);
-//		Log.d(tag, "realm:\t\t" + realm);
+		Log.d(tag, "B64HmacMd5:");
+		Log.d(tag, "password:\t" + password);
+		Log.d(tag, "realm:\t\t" + realm);
 
 		// Put data in byte arrays to use for MD5		
 		byte[] key = EncodingUtils.getAsciiBytes(password);
@@ -146,7 +146,7 @@ public class PasswordHasher {
 		
         String newhash = hash.replaceAll("=+$", "");
 		
-//		Log.d(tag, "hash:\t\t" + newhash);
+		Log.d(tag, "hash:\t\t" + newhash);
 
 		return newhash;
 	}
@@ -176,7 +176,7 @@ public class PasswordHasher {
 	/// </returns>
 	protected String ApplyConstraints(String hash, int size, boolean nonalphanumeric)
 	{
-//		Log.d(tag, "ApplyConstraints:");
+		Log.d(tag, "ApplyConstraints:");
 
 		int startingSize = size - 4; // Leave room for extra characters
 		String result = hash.substring(0, startingSize);
@@ -187,48 +187,48 @@ public class PasswordHasher {
 		//Regex matchSymbol = new Regex("\\W");
 
 		
-//		Log.d(tag, "startingSize:\t" + startingSize);
-//		Log.d(tag, "result (start):\t" + result);
-//		Log.d(tag, "extras (start):\t" + new String(extras.toString()));
-//		Log.d(tag, "nonalphanumeric:\t" + nonalphanumeric);
+		Log.d(tag, "startingSize:\t" + startingSize);
+		Log.d(tag, "result (start):\t" + result);
+		Log.d(tag, "extras (start):\t" + new String(extras.toString()));
+		Log.d(tag, "nonalphanumeric:\t" + nonalphanumeric);
 		
 		// Add the extra characters
-//		Log.d(tag, "A-Z:\t\t\t");
+		Log.d(tag, "A-1Z:\t\t\t");
 		
 		result += (Pattern.compile("[A-Z]").matcher(result).find() ? nextExtraChar()
 			                                          : nextBetween('A', 26));
-//		Log.d(tag, result);
+		Log.d(tag, result);
 		
-//		Log.d(tag, "a-z:\t\t\t");
+		Log.d(tag, "a-z:\t\t\t");
 		result += (Pattern.compile("[a-z]").matcher(result).find() ? nextExtraChar()
 			                                          : nextBetween('a', 26));
-//		Log.d(tag, result);
+		Log.d(tag, result);
 		
-//		Log.d(tag, "0-9:\t\t\t");
+		Log.d(tag, "0-9:\t\t\t");
 		result += (Pattern.compile("[0-9]").matcher(result).find() ? nextExtraChar()
 			                                          : nextBetween('0', 10));
-//		Log.d(tag, result);
+		Log.d(tag, result);
 
-//		Log.d(tag, "\\W:\t\t\t");
+		Log.d(tag, "\\W:\t\t\t");
 		result += (Pattern.compile("\\W").matcher(result).find() && nonalphanumeric ? 
 		                                                nextExtraChar()
 			                                          : '+');
-//		Log.d(tag, result);
+		Log.d(tag, result);
 		
 		while(matchSymbol.matcher(result).find() && !nonalphanumeric) {
 			//Log.d(tag, "Replace '" + matchSymbol.Match(result) + "':\t\t");
-//			Log.d(tag, "Replace '" + matchSymbol.matcher(result).group() + "':\t\t");
+			Log.d(tag, "Replace '" + matchSymbol.matcher(result).group() + "':\t\t");
 
 			result = result.replaceFirst("\\W", Character.toString(nextBetween('A', 26)));	// 
-//			Log.d(tag, result);
+			Log.d(tag, result);
 		}
 
 		// Rotate the result to make it harder to guess the inserted locations
-//		Log.d(tag, "Rotate ");
+		Log.d(tag, "Rotate ");
 		char[] rotateArr = result.toCharArray();
 		rotateArr = rotate(rotateArr, nextExtra());
 		result = new String(rotateArr);
-//		Log.d(tag, result);
+		Log.d(tag, result);
 		
 		return result;
 	}
@@ -262,7 +262,7 @@ public class PasswordHasher {
 		
 		while (amount -- != 0) {
 			q.add(q.remove());
-//			Log.d(tag, q.toString());
+			Log.d(tag, q.toString());
 		}
 		
 		Character[] chars = (Character[]) q.toArray(new Character[0]);		

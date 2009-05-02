@@ -21,7 +21,7 @@ package com.android.pwdhashandroid.sharp2java;
 /// <summary>
 /// dot.NET ArgumentNullException for Java
 /// </summary>
-public class ArgumentNullException extends Exception {
+public class ArgumentNullException extends Error {
 
 	private static final long serialVersionUID = -4968271778721765018L;
 
