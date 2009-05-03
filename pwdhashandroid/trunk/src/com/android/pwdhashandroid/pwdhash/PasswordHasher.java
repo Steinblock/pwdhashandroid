@@ -178,7 +178,7 @@ public class PasswordHasher {
 	{
 		Log.d(tag, "ApplyConstraints:");
 
-		int startingSize = size - 4; // Leave room for extra characters
+		int startingSize = size - 4; // Leave room for extra characters  <-- this implicitly means that password has to be at least 2 chars long
 		String result = hash.substring(0, startingSize);
 //		extras = new CSQueue(hash.substring(startingSize).toCharArray());
 		extras = CreateQueue(hash.substring(startingSize).toCharArray());
@@ -217,7 +217,7 @@ public class PasswordHasher {
 		
 		while(matchSymbol.matcher(result).find() && !nonalphanumeric) {
 			//Log.d(tag, "Replace '" + matchSymbol.Match(result) + "':\t\t");
-			Log.d(tag, "Replace '" + matchSymbol.matcher(result).group() + "':\t\t");
+			//Log.d(tag, "Replace '" + matchSymbol.matcher(result).group() + "':\t\t");
 
 			result = result.replaceFirst("\\W", Character.toString(nextBetween('A', 26)));	// 
 			Log.d(tag, result);

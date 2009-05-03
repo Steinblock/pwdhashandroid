@@ -13,7 +13,8 @@ public class PasswordHasherTests extends TestCase {
 	private static final HashMap<String, String> hashTable = new HashMap<String, String>();
 	static {
 		hashTable.put("", "2MPb");	// empty password
-		hashTable.put("1", "VJh2");
+		hashTable.put("aa", "b6MX");
+		hashTable.put("tiny", "9DsKHd");	// 4 = smallest supported size
 		hashTable.put("geheim", "GyO3YHSs");
 		hashTable.put("verylongpasswordverylongpasswordverylongpassword",
 							"TY4F8NbLHTb2Uv5w047wcQAAAA");
@@ -28,17 +29,42 @@ public class PasswordHasherTests extends TestCase {
 	}
 	
 	@SmallTest
-	public void testGetHashedPasswordForEmptyPass() throws GeneralSecurityException {
-		String pass = "";
+	public void testGetHashedPasswordForEmptyPassThrowsIllegalArgumentException() throws GeneralSecurityException {
+		
+		try {
+			@SuppressWarnings("unused")
+			String actual = GetHashHelper("");
+
+			fail("PasswordHasher.GetHashedPassword should throw IllegalArgumentException for empty pass");
+		} catch (IllegalArgumentException e) { }
+
+	}
+	
+	@SmallTest
+	public void testGetHashedPasswordForNullPassThrowsIllegalArgumentException() throws GeneralSecurityException {
+		
+		try {
+			@SuppressWarnings("unused")
+			String actual = GetHashHelper("");
+
+			fail("PasswordHasher.GetHashedPassword should throw IllegalArgumentException for pass = null");
+		} catch (IllegalArgumentException e) { }
+
+	}
+	
+	@SmallTest
+	public void testGetHashedPasswordForVeryShortPass() throws GeneralSecurityException {
+		// Should work, however cannot be used from GUI, becaus min. length = 4
+		String pass = "aa";
 		String expected = hashTable.get(pass);
 		String actual = GetHashHelper(pass);
 
 		assertEquals(expected, actual);
 	}
-
+	
 	@SmallTest
 	public void testGetHashedPasswordForShortPass() throws GeneralSecurityException {
-		String pass = "1";
+		String pass = "tiny";
 		String expected = hashTable.get(pass);
 		String actual = GetHashHelper(pass);
 
