@@ -4,24 +4,27 @@ import android.content.Context;
 import android.text.ClipboardManager;
 
 public class ClipboardHelper  {
-
+	
+	private final static String initializeErrorString = 
+		"Class has not been initialized\nYou need to call ClipboardHelper.Initialize(context) first.";
+	
 	public static void setText(CharSequence text) {
 		if (clipboardManager == null)
-			throw new NullPointerException("Class has not been initialized");
+			throw new NullPointerException(initializeErrorString);
 		
 		clipboardManager.setText(text);
 	}
 	
 	public static CharSequence getText() {
 		if (clipboardManager == null)
-			throw new NullPointerException("Class has not been initialized");
+			throw new NullPointerException(initializeErrorString);
 		
 		return clipboardManager.getText();
 	}
 	
 	public static boolean hasText() {
 		if (clipboardManager == null)
-			throw new NullPointerException("Class has not been initialized");
+			throw new NullPointerException(initializeErrorString);
 		
 		return clipboardManager.hasText();
 	}

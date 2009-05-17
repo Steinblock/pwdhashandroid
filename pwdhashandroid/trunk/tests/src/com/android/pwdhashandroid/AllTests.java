@@ -50,4 +50,5 @@ public class AllTests extends TestSuite {
                 .includeAllPackagesUnderHere()
                 .build();
     }
+
 }

@@ -1,6 +1,6 @@
 // PwdHashAndroid.java
 // 
-// Copyright (C) 2009 Jürgen Steinblock
+// Copyright (C) 2009 Jï¿½rgen Steinblock
 //
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -137,7 +137,7 @@ public class PwdHashEdit extends Activity {
 
         		String siteDomain = editTextSiteDomain.getText().toString();
         		String sitePassword = editTextSitePassword.getText().toString();
-					
+
         		TryAction(siteDomain, sitePassword, false, true);
         	}
         });

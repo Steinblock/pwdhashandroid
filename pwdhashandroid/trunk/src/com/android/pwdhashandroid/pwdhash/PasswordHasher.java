@@ -1,7 +1,7 @@
 //
 // PasswordHasher.java
 //
-// 2009 Jürgen Steinblock
+// 2009 Jï¿½rgen Steinblock
 //
 // Based on
 //
@@ -179,9 +179,20 @@ public class PasswordHasher {
 		Log.d(tag, "ApplyConstraints:");
 
 		int startingSize = size - 4; // Leave room for extra characters  <-- this implicitly means that password has to be at least 2 chars long
-		String result = hash.substring(0, startingSize);
-//		extras = new CSQueue(hash.substring(startingSize).toCharArray());
-		extras = CreateQueue(hash.substring(startingSize).toCharArray());
+		
+		// String result = hash.substring(0, startingSize);
+		
+		// If the password is longer then the actual hash, return the hash,
+		// otherwise only the first "startingSize" bits of the hash
+		String result = startingSize > hash.length() ? hash :  hash.substring(0, startingSize);
+		
+
+		// to avoid Exception for startingsize longer then hash, we return the length of the hash as sthe startinpoint if longer 
+		extras = CreateQueue(hash.substring(
+											startingSize > hash.length() ?
+											hash.length() :
+											startingSize 
+										   ).toCharArray());
 		
 		Pattern matchSymbol = Pattern.compile("\\W");
 		//Regex matchSymbol = new Regex("\\W");

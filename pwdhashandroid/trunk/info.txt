@@ -1,5 +1,23 @@
-Create avd with android 1.5 SDK and windows (vista)
+Howto compile / test this app with Eclipse + 1.5 SDK
 
-cd \location\to\sdk\tools
+
+1. Checkout from trunk
+
+2. Import project(s):
+- Start "New Android project" wizard (Toolbar)
+- Application name: "pwdhashandroid"
+- Choose "Create project from existing source"
+- Browse to project folder and click finish
+
+to run unit tests, import the test project:  
+- Start "New Android project" wizard (Toolbar)
+- Application name: "pwdhashandroid.tests"
+- Choose "Create project from existing source"
+- Browse to project folders subfolder "test" and click finish
+
+3. Create avd's for the default launch configurations (or create your own launch configs) 
+(from within tools folder)
 android create avd -t 1 -n android-1.1-default
 android create avd -t 2 -n android-1.5-default
+
+4. Launch configurations should be created automatically, if not create your own (pretty straight forward, just default values)
