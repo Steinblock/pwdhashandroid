@@ -144,7 +144,7 @@ public class SitesController {
     
     public void Save(Site site) {
 
-    	if (site.id == 0) {
+    	if (site.id <= 0) {
     		site.CreatedOn = new Date();
     		site.ModifiedOn = new Date();
     		site.AccessedOn = new Date();
@@ -163,7 +163,7 @@ public class SitesController {
         cv.put(KEY_ACCESSEDON, getNow());
         cv.put(KEY_USAGECOUNTER, site.UsageCounter);
         
-        if (site.id == 0) {
+        if (site.id <= 0) {
         	site.id = mDb.insert(DATABASE_TABLE, null, cv);
         	
         	if (site.id <= 0)
@@ -206,7 +206,7 @@ public class SitesController {
         return mDb.delete(DATABASE_TABLE, KEY_ROWID + "=" + rowId, null) > 0;
         
     }
-
+    
     /**
      * Return a Cursor over the list of all notes in the database
      * 

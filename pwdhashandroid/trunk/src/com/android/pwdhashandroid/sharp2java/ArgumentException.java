@@ -26,7 +26,7 @@ public class ArgumentException extends Error {
 	private static final long serialVersionUID = 5753524364881271418L;
 
 	public ArgumentException(String message, String argument) {
-		super(message + ": " + argument);
+		super(message);
 	}
 
 }

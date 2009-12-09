@@ -79,7 +79,11 @@ public class DomainExtractor {
 					break;
 				}
 			}
-		} else {
+		}
+		else if (hosts.length < 2) {
+			throw new ArgumentException(uri + " is not a valid URI", uri);
+		}
+		else {
 			s = CSString.join(".", hosts);
 		}
 		// End Chris Zarate's code

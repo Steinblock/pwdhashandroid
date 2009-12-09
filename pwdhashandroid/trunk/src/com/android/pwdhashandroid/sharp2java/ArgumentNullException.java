@@ -26,7 +26,7 @@ public class ArgumentNullException extends Error {
 	private static final long serialVersionUID = -4968271778721765018L;
 
 	public ArgumentNullException(String argument, String message) {
-		super(message + ": " + argument);
+		super(message);
 	}
 
 	
